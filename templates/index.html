@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WhatsApp Resume Bot Dashboard</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <h1>📥 WhatsApp Resume Bot Dashboard</h1>
+  <p>All messages received via WhatsApp will appear here in real-time.</p>
+  <table>
+    <tr>
+      <th>Sender</th>
+      <th>Message</th>
+    </tr>
+    {% for msg in messages %}
+    <tr>
+      <td>{{ msg.sender }}</td>
+      <td>{{ msg.message }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
